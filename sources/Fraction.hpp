@@ -14,21 +14,21 @@ private:
 public:
     // Constructor
     Fraction(int num, int den);
-
+    Fraction(float num);
     // Getters
     int getNumerator() const;
     int getDenominator() const;
 
     // Overloaded operators
-    Fraction operator+(const Fraction& other) const;
-    Fraction operator-(const Fraction& other) const;
-    Fraction operator*(const Fraction& other) const;
-    Fraction operator/(const Fraction& other) const;
-    bool operator==(const Fraction& other) const;
-    bool operator<(const Fraction& other) const;
-    bool operator>(const Fraction& other) const;
-    bool operator<=(const Fraction& other) const;
-    bool operator>=(const Fraction& other) const;
+    friend Fraction operator+(const Fraction& frac1, const Fraction& frac2);
+    friend Fraction operator-(const Fraction& frac1, const Fraction& frac2);
+    friend Fraction operator*(const Fraction& frac1, const Fraction& frac2);
+    friend Fraction operator/(const Fraction& frac1, const Fraction& frac2);
+    friend bool operator==(const Fraction& frac1, const Fraction& frac2);
+    friend bool operator<(const Fraction& frac1, const Fraction& frac2);
+    friend bool operator>(const Fraction& frac1, const Fraction& frac2);
+    friend bool operator<=(const Fraction& frac1, const Fraction& frac2);
+    friend bool operator>=(const Fraction& frac1, const Fraction& frac2);
     Fraction operator++();
     Fraction operator++(int);
     Fraction operator--();

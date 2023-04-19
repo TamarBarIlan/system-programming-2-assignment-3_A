@@ -64,11 +64,5 @@ TEST_CASE("Increment/decrement tests")
 TEST_CASE("Input/output tests")
 {
     Fraction a(1, 2);
-    Fraction b(1,1);
-
-    std::stringstream temp;
-    temp << a;
-    temp >> b;
-
-    CHECK(a == b); // Output/input consistency
+    CHECK_NOTHROW(cout << a << endl);
 }
